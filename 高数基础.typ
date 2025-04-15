@@ -1,35 +1,31 @@
-#set page(columns: 2,margin: (x:28pt,y:40pt))
-#set text(font: "New Computer Modern")
+#import "utils.typ" : section, subsec
 
-#let sec(content)={
-  counter("sec").step()
-  set align(left)
-  set text(size:17pt)
-  context heading(math.section+counter("sec").display("1")+[ ]+content,numbering: none)
-}
- 
-#let subsec(content)={
-  set text(size:14pt)
-  
-  context heading(h(2em)+content,numbering: none,level: 2)
+#set text(font: "SimSun")
+#set par(first-line-indent: (amount:2em,all:true),spacing: 1.2em)
+#set page(margin:(x:40pt))
+#set enum(indent: 3em,spacing: 1.2em)
+
+#show math.equation: it => {
+  show regex("\p{script=Han}"): set text(font: "SimSun")
+  it
 }
 
 //#show heading.where(level:2) : set text(size:14pt)
 
 
 //#set align(center)
-#sec[多项式]
+#section[多项式]
 $ (root(3, a) plus.minus root(3, b))(root(3, a^2) minus.plus root(3, a b) + root(3, b^2)) = a plus.minus b $
 $ (a plus.minus b)(a^2 minus.plus a b + b^2)=a plus.minus b $
 
-#sec[不等式]
+#section[不等式]
 #subsec[Cauchy不等式]
 $ (a_1^2+a_2^2+dots+a_n^2)(b_1^2+b_2^2+dots+b_n^2)\ >=(a_1b_1+a_2b_2+dots+a_n b_n)^2 $
 #subsec[三角（绝对值）不等式]
 $ abs(abs(a)-abs(b)) <= abs(a plus.minus b)<= abs(a)+abs(b) $
 
 
-#sec[三角变换]
+#section[三角变换]
 #subsec[不常见三角函数]
 $ cot x = 1/(tan x) "   余切函数" $
 $ sec x = 1/(cos x) "   正割函数" $
@@ -62,11 +58,11 @@ $ cos a - cos b = -2 sin((a+b)/2) sin((a-b)/2) $
 
 #subsec[#text(fill: red)[TODO：反三角函数]]
 
-#sec[数列]
+#section[数列]
 #subsec[等比数列求和]
 $ S_n = a_1(1-q^n)/(1-q) "    " (q eq.not 1) $
 
-#sec[坐标变换]
+#section[坐标变换]
 #subsec[二维空间坐标旋转]
 原坐标为$(x,y)$，逆时针旋转角度为$a$，则新坐标为$(x',y')$，有：
 $ x' = x cos a - y sin a $
@@ -75,4 +71,4 @@ $ y' = x sin a + y cos a $
 #set math.mat(gap:1em,row-gap:1em)
 $ mat(delim: "[",cos a,-sin a;sin a,cos a;) $
 
-#text(fill:red)[#sec[对称性]]
+#text(fill:red)[#section[对称性]]

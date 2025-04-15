@@ -1,4 +1,4 @@
-#import "utils.typ" : sec, subsec
+#import "utils.typ" : section, subsec
 #import "@preview/physica:0.9.5"
 
 #set text(font: "SimSun")
@@ -16,7 +16,7 @@
 #pagebreak()
 
 #set page(columns:2)
-#sec[常见函数求导]
+#section[常见函数求导]
 #set enum(spacing: 1.2em)
 + $(ln x)'=1/x $
 + $(arcsin x)'=1/(sqrt(1-x^2)) $
@@ -28,24 +28,24 @@
 + $[ln(x + sqrt(x^2 plus.minus a^2))]'=1/(sqrt(x^2 plus.minus a^2)) $
 
 
-#sec[一阶微分形式不变性]
+#section[一阶微分形式不变性]
 $ mono(d){f[g(x)]}=f'[g(x)] mono(d)[g(x)]=f'[g(x)]dot g'(x) mono(d)x $
 
 
-#sec[反函数的导数]
+#section[反函数的导数]
 设$y=f(x)$为单调、可导函数，且$f'(x) eq.not 0$，则存在反函数$x=phi (y)$,且$(mono(d)x)/(mono(d)y)=1/((mono(d)y)/(mono(d)x))$,即$phi ' (y)=1/(f'(x))$
 #parbreak()
 若求$phi ''(y)$,不能直接使用求导公式，应按照高阶微分的定义进行推导:
 $ (mono(d)^2x)/(mono(d)y^2)=(mono(d) (mono(d)x)/( mono(d)y))/(mono(d)y) $
 
 
-#sec[隐函数求导]
+#section[隐函数求导]
 设函数$y=y(x)$是由方程$F(x,y)=0$确定的可导函数，则：
 + 方程$F(x,y)=0$两边对自变量$x$求导，将$y$看作中间变量，得到一个关于$y'$的方程
 + 解方程即可求出$y'$
 
 
-#sec[高阶导数]
+#section[高阶导数]
 + 数学归纳
 + 莱布尼茨公式：\
   $ (u plus.minus v)^((n))=u^((n))plus.minus v^((n)) $
@@ -56,6 +56,6 @@ $ (mono(d)^2x)/(mono(d)y^2)=(mono(d) (mono(d)x)/( mono(d)y))/(mono(d)y) $
   + 根据泰勒展开唯一性，比较次数。
 
 
-#sec[参数方程]
+#section[参数方程]
 函数由$ cases(x=phi(t),y=psi(t)) $ 确定，则：
 $ (mono(d)y)/(mono(d)x)=(mono(d)y\/mono(d)t)/(mono(d)x\/mono(d)t) $

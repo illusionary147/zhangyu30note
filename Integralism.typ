@@ -1,4 +1,4 @@
-#import "utils.typ" : sec, subsec
+#import "utils.typ" : section, subsec
 
 #set text(font: "SimSun")
 #set par(first-line-indent: (amount:2em,all:true),spacing: 1.2em)
@@ -13,7 +13,7 @@
 #outline()
 #pagebreak()
 
-#sec[不定积分]
+#section[不定积分]
 #subsec[微积分基本定理]
 $ F(x)=integral_a^x f(t) mono(d)t $
 $ F'(x)=f(x) $
@@ -25,13 +25,13 @@ $ integral_a^b f(x) mono(d)x =F(b)-F(a) $
 + 含有第一类间断点和无穷间断点的函数$f(x)$在包含该间断点的区间内没有原函数
 
 
-#sec[定积分]
+#section[定积分]
 #subsec[定积分定义]
 $ integral_a^b f(x)mono(d)x=lim_(n -> oo) sum_(i=1)^n f(a+(b-a)/n i)(b-a)/n  $或$ integral_a^b f(x)mono(d)x=lim_(n -> oo) sum_(i=1)^n f(a+(b-a)/n dot (2i-1)/2)(b-a)/n $
 $a=0,b=1时,$取小矩形右端点函数值作为高：
 $ integral_0^1 f(x)mono(d)x=lim_(n arrow oo) sum_ (i=1)^n f(i/n)1/n $取小矩形中点函数值为高时有：$ integral_0^1 f(x)mono(d)x=lim_(n arrow oo) sum_ (i=1)^n f((2i-1)/(2n))1/n $
 
-#sec[定积分存在定理]
+#section[定积分存在定理]
 #subsec[定积分存在充分条件]
 + 若$f(x)在[a,b]$连续，则$integral_a^b f(x)mono(d)x$存在
 + 若$f(x)在[a,b]$单调，则$integral_a^b f(x)mono(d)x$存在
@@ -48,7 +48,7 @@ $ integral_0^1 f(x)mono(d)x=lim_(n arrow oo) sum_ (i=1)^n f(i/n)1/n $取小矩�
 + 中值定理：若$f(x)$在$[a,b]$上连续，则至少存在一点$xi in [a,b]$使$ integral_a^b f(x)mono(d) x =f(xi)(b-a) $
 
 
-#sec[变限函数]
+#section[变限函数]
 $ F(x)=integral_v(x)^u(x)f(t)mono(d)t $
 $ F'(x)=f(u(x))u'(x)-f(v(x))v'(x) $
 
@@ -59,7 +59,7 @@ $ F'(x)=f(u(x))u'(x)-f(v(x))v'(x) $
   若$x=x_0 in I 是 f(x)$唯一的可去间断点，则$F(x)=integral_a^x f(t)mono(d)x 在 x_0$处可导，且$F'_-(x_0)=F'_+(x_0)=limits(lim)_(x arrow x_0)f(x) eq.not f(x_0)$ 
 
 
-#sec[反常积分]
+#section[反常积分]
 #subsec[定义]
 + 无穷区间上的反常积分\
   设$F(x)是 f(x)在$相应区间上的一个原函数，

@@ -1,4 +1,4 @@
-#let sec(content)={
+#let section(content)={
   counter("sec").step()
   set align(left)
   set text(size:17pt)
