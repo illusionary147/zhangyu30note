@@ -50,7 +50,7 @@ $ macron(y)=(integral_a^b f^2(x)dif x)/(integral _a^b f(x)dif x) $
  $ s=integral_a^b sqrt(1+[y'(x)]^2)dif x $
 
 + 极坐标$r=r(theta)(alpha<=theta<=beta)$
- $ s=integral_alpha^beta sqrt([r^2(theta)+[r'(theta)]^2))dif theta $
+ $ s=integral_alpha^beta sqrt([r(theta)]^2+[r'(theta)]^2) dif theta $
 
 + 参数方程$x=x(t),y=y(t)(t_0<=t<=t_1)$
  $ s=integral_(t_0)^(t_1) sqrt([x'(t)]^2+[y'(t)]^2)dif t $
