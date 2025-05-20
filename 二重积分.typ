@@ -80,3 +80,4 @@ $ dif sigma = r dif r dif theta $
 $
   cases(x=x(u,v), y=y(u,v)),则 dif x dif y=abs(pdv((x,y), (u,v)))dif u dif v, pdv((x,y), (u,v))=mat(delim: "|", pdv(x, u), pdv(x, v); pdv(y, u), pdv(y, v))
 $
+换元法可能改变积分上下限，尤其是极坐标系下，若有系数，注意$theta$取值范围
