@@ -11,7 +11,7 @@
   context heading(h(1em) + content, numbering: none, level: 2)
 }
 
-#let my_init() = {
+#let my_init(it) = {
   import "@preview/physica:0.9.5": *
   set text(font: "SimSun")
   set par(first-line-indent: (amount: 2em, all: true))
@@ -23,4 +23,5 @@
     it
   }
   show math.equation: set text(features: ("cv01",))
+  it
 }
