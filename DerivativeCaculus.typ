@@ -1,31 +1,31 @@
-#import "utils.typ" : section, subsec
+#import "utils.typ": section, subsec
 #import "@preview/physica:0.9.5"
 
 #set text(font: "SimSun")
-#set par(first-line-indent: (amount:2em,all:true))
-#set page(margin:(x:40pt))
+#set par(first-line-indent: (amount: 2em, all: true))
+#set page(margin: (x: 40pt))
 #set enum(indent: 3em)
 
 #show math.equation: it => {
   show regex("\p{script=Han}"): set text(font: "SimSun")
-  set text(size:13pt)
+  set text(size: 13pt)
   it
 }
 
 #outline()
 #pagebreak()
 
-#set page(columns:2)
+#set page(columns: 2)
 #section[常见函数求导]
 #set enum(spacing: 1.2em)
-+ $(ln x)'=1/x $
-+ $(arcsin x)'=1/(sqrt(1-x^2)) $
-+ $(arccos x)'=-1/(sqrt(1-x^2)) $
-+ $(arctan x)'=1/(1+x^2) $
-+ $("arccot" x)'=-1/(1+x^2) $
-+ $("sec" x )'= "sec" x tan x $
-+ $(csc x)' = - csc x cot x $
-+ $[ln(x + sqrt(x^2 plus.minus a^2))]'=1/(sqrt(x^2 plus.minus a^2)) $
++ $(ln x)'=1/x$
++ $(arcsin x)'=1/(sqrt(1-x^2))$
++ $(arccos x)'=-1/(sqrt(1-x^2))$
++ $(arctan x)'=1/(1+x^2)$
++ $("arccot" x)'=-1/(1+x^2)$
++ $("sec" x )'= "sec" x tan x$
++ $(csc x)' = - csc x cot x$
++ $[ln(x + sqrt(x^2 plus.minus a^2))]'=1/(sqrt(x^2 plus.minus a^2))$
 
 
 #section[一阶微分形式不变性]
@@ -49,13 +49,13 @@ $ (mono(d)^2x)/(mono(d)y^2)=(mono(d) (mono(d)x)/( mono(d)y))/(mono(d)y) $
 + 数学归纳
 + 莱布尼茨公式：\
   $ (u plus.minus v)^((n))=u^((n))plus.minus v^((n)) $
-  $ (u v)^((n))=limits(Sigma)_(k=0)^n C_n^k u^((n-k)) v^((k)) $
+  $ (u v)^((n))=sum_(k=0)^n C_n^k u^((n-k)) v^((k)) $
 + 泰勒展开
   + 任意一个任意阶可导的函数都可以写成：\
-    $ y=f(x)=limits(Sigma)_(n=0)^(oo)(f^((n))(x_0))/n! (x-x_0)^n $
+    $ y=f(x)=sum_(n=0)^(oo)(f^((n))(x_0))/n! (x-x_0)^n $
   + 根据泰勒展开唯一性，比较次数。
 
 
 #section[参数方程]
-函数由$ cases(x=phi(t),y=psi(t)) $ 确定，则：
+函数由$ cases(x=phi(t), y=psi(t)) $ 确定，则：
 $ (mono(d)y)/(mono(d)x)=(mono(d)y\/mono(d)t)/(mono(d)x\/mono(d)t) $

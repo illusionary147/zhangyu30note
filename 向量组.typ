@@ -1,4 +1,4 @@
-#import "utils.typ": section, subsec, my_init
+#import "utils.typ": my_init, section, subsec
 //#show:my_init()
 #import "@preview/physica:0.9.5": *
 #set text(font: "SimSun")
@@ -28,7 +28,7 @@
     当$bold(alpha)^TT bold(beta)=0$时，称两个向量正交
     设$bold(A)=mat(bold(alpha), bold(beta)),$若$bold(alpha)perp bold(beta),$则$bold(A)^TT bold(A)=mat(abs(abs(bold(alpha)))^2, 0; 0, abs(abs(beta))^2)$,又若$abs(abs(bold(alpha)))=abs(abs(bold(beta)))$,则$bold(A)^TT bold(A)=bold(E)$,
 
-    向量$bold(alpha)$的模$abs(abs(bold(alpha)))=sqrt(limits(Sigma)_(i=1)^n a_i^2)$
+    向量$bold(alpha)$的模$abs(abs(bold(alpha)))=sqrt(sum_(i=1)^n a_i^2)$
 
     *标准正交向量*#h(1em)若列向量组$bold(alpha)_1,bold(alpha)_2,dots,alpha_s$满足$ alpha_i^TT alpha_j=cases(0"   if   "i eq.not j, 1"   if   "i =j) $则称$bold(alpha_1),bold(alpha)_2,dots,bold(alpha)_s$为标准或单位向量正交组，也叫做规范正交基
   ]

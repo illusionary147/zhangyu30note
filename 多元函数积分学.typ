@@ -1,4 +1,4 @@
-#import "utils.typ": section, subsec, my_init
+#import "utils.typ": my_init, section, subsec
 //#show:my_init()
 #import "@preview/physica:0.9.5": *
 #set text(font: "SimSun")
@@ -39,9 +39,7 @@
     + 普通对称性
 
       假设$Omega$关于$x O z$面对称，则有
-      $
-        limits(integral.triple)_Omega f(x,y,z)dd(v)=cases(2limits(integral.triple)_Omega_1 f(x,y,z)dd(v)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z))
-      $$Omega_1$是$Omega$在对称面右/左边的部分
+      $ limits(integral.triple)_Omega f(x,y,z)dd(v)=cases(2limits(integral.triple)_Omega_1 f(x,y,z)dd(v)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z)) $$Omega_1$是$Omega$在对称面右/左边的部分
     + 轮换对称性
 
       直角坐标系下，若交换$x,y,z$的顺序不改变$Omega$,称该函数具有轮换对称性。
@@ -58,9 +56,7 @@
       $ cases(x=r sin phi cos theta, y=r sin phi sin theta, z=r cos phi) $
       故$ dd(v)=r^2 sin phi dd(r)dd(phi)dd(theta) $
     + 换元法
-      $
-        cases(x=x(u,v,w), y=y(u,v,w), z=z(u,v,w)) arrow.double dd(v)=abs(pdv((x,y,z), (u,v,w)))
-      $其中$ pdv((x,y,z), (u,v,w))=mat(
+      $ cases(x=x(u,v,w), y=y(u,v,w), z=z(u,v,w)) arrow.double dd(v)=abs(pdv((x,y,z), (u,v,w))) $其中$ pdv((x,y,z), (u,v,w))=mat(
         delim: "|",
         pdv(x, u), pdv(x, v), pdv(x, w);
         pdv(y, u), pdv(y, v), pdv(y, w);
@@ -82,7 +78,7 @@
   section[第一类曲线积分]
   subsec[概念]
   [
-    在曲线$Gamma$上有界的函数$f(x,y,z)$,定义$ integral_Gamma f(x,y,z)dd(s)=limits(lim)_(lambda arrow 0)limits(Sigma)_(i=1)^n f(xi_i,eta_i,zeta_i)Delta s_i $
+    在曲线$Gamma$上有界的函数$f(x,y,z)$,定义$ integral_Gamma f(x,y,z)dd(s)=limits(lim)_(lambda arrow 0)sum_(i=1)^n f(xi_i,eta_i,zeta_i)Delta s_i $
   ]
   subsec[性质]
   [
@@ -106,9 +102,7 @@
     + 普通对称性
 
       假设$Gamma$关于$x O z$面对称，则有
-      $
-        integral_Gamma f(x,y,z)dd(s)=cases(2integral_Gamma_1 f(x,y,z)dd(s)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z))
-      $$Gamma_1$是$Gamma$在对称面右/左边的部分
+      $ integral_Gamma f(x,y,z)dd(s)=cases(2integral_Gamma_1 f(x,y,z)dd(s)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z)) $$Gamma_1$是$Gamma$在对称面右/左边的部分
     + 轮换对称性
 
       直角坐标系下，若交换$x,y,z$的顺序不改变$Gamma$,称该函数具有轮换对称性。
@@ -141,7 +135,7 @@
   section[第一类曲面积分]
   subsec[概念]
   [
-    光滑曲面$Sigma$上的有界函数$f(x,y,z),$定义第一类曲面积分为$ limits(integral.double)_Sigma f(x,y,z)dd(S)=limits(lim)_(lambda->0)limits(Sigma)_(i=1)^n f(xi_i,eta_i,zeta_i)Delta S $
+    光滑曲面$Sigma$上的有界函数$f(x,y,z),$定义第一类曲面积分为$ limits(integral.double)_Sigma f(x,y,z)dd(S)=limits(lim)_(lambda->0)sum_(i=1)^n f(xi_i,eta_i,zeta_i)Delta S $
   ]
   subsec[性质]
   [
@@ -163,9 +157,7 @@
     + 普通对称性
 
       假设$Sigma$关于$x O z$面对称，则有
-      $
-        limits(integral.double)_Sigma f(x,y,z)dd(S)=cases(2limits(integral.double)_Sigma_1 f(x,y,z)dd(S)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z))
-      $$Sigma_1$是$Sigma$在对称面右/左边的部分
+      $ limits(integral.double)_Sigma f(x,y,z)dd(S)=cases(2limits(integral.double)_Sigma_1 f(x,y,z)dd(S)","f(x,y,z)=f(x,-y,z), 0 ",                  "f(x,y,z)=-f(x,-y,z)) $$Sigma_1$是$Sigma$在对称面右/左边的部分
     + 轮换对称性
 
       直角坐标系下，若交换$x,y,z$的顺序不改变$Sigma$,称该函数具有轮换对称性。
@@ -239,9 +231,7 @@
     + 基本方法————化为二重积分：拆成三个二重积分，分别投影到相应坐标面上
     + 投影转换法
       + 正向单位法向量求法
-        $
-          bold(n)="\""plus.minus"\""1 / sqrt(1+(pdv(z, x))^2+(pdv(z, y))^2)(-pdv(z, x),-pdv(z, y),1)
-        $上侧为正时取$+$,下侧为正时取$-$
+        $ bold(n)="\""plus.minus"\""1 / sqrt(1+(pdv(z, x))^2+(pdv(z, y))^2)(-pdv(z, x),-pdv(z, y),1) $上侧为正时取$+$,下侧为正时取$-$
       + 转换投影定理
 
         设曲面$Sigma:z=z(x,y),z$具有一阶连续偏导数，且$P(x,y,z),Q(x,y,z),R(x,y,z)$在$Sigma$上连续，则$ limits(integral.double)_Sigma P(x,y,z)dd(y, z)+Q(x,y,z)dd(z, x)+R(x,y,z)dd(x, y)=\" plus.minus \"limits(integral.double)_D (-P pdv(z, x)-Q pdv(z, y)+R)dd(x, y), $其中$P=P[x,y,z(x,y)],Q=Q[x,y,z(x,y)],R=R[x,y,z(x,y)]$

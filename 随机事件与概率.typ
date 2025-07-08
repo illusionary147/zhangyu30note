@@ -68,8 +68,8 @@
 
       一般地，对于$n>2$,如果$P(A_1 A_2 dots A_n)>0$,则有
       $ P(A_1 A_2 dots A_n)=P(A_1)P(A_2 bar A_1)P(A_3 bar A_1 A_2)dots P(A_n bar A_1 A_2 dots A_(n-1)) $
-    + 全概率公式：若$limits(union)_(i=1)^(n) A_i = Omega$,$A_i A_j=emptyset(i eq.not j, i, j=1, 2, dots, n),P(A_i)>0$,则对任意事件$B$,有$ B=limits(union)_(i=1)^(n)A_i B,P(B)=limits(Sigma)_(i=1)^n P(A_i)P(B bar A_i) $
-    + 贝叶斯公式（又叫逆概率公式）：如果$limits(union)_(i=1)^(n)A_i=Omega,A_i A_j=emptyset(i eq.not j ";"i, j=1, 2, dots, n),P(A_i)>0$,则对任意事件$B$,有：$ P(A_j bar B)=(P(A_j)P(B bar A_j))/(limits(Sigma)_(i=1)^n P(A_i)P(B bar A_i))(j=1,2,dots,n) $
+    + 全概率公式：若$limits(union)_(i=1)^(n) A_i = Omega$,$A_i A_j=emptyset(i eq.not j, i, j=1, 2, dots, n),P(A_i)>0$,则对任意事件$B$,有$ B=limits(union)_(i=1)^(n)A_i B,P(B)=sum_(i=1)^n P(A_i)P(B bar A_i) $
+    + 贝叶斯公式（又叫逆概率公式）：如果$limits(union)_(i=1)^(n)A_i=Omega,A_i A_j=emptyset(i eq.not j ";"i, j=1, 2, dots, n),P(A_i)>0$,则对任意事件$B$,有：$ P(A_j bar B)=(P(A_j)P(B bar A_j))/(sum_(i=1)^n P(A_i)P(B bar A_i))(j=1,2,dots,n) $
   ]
   section[事件独立性和独立重复实验]
   subsec[事件独立性]

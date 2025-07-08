@@ -18,7 +18,7 @@
 
 #section[概念，性质与对称性]
 #subsec[概念]
-设$f(x,y)$是有闭界区域$D$上的有界函数，将整个闭区域$D$任意分成$n$个小闭区域$ Delta sigma_1,Delta sigma_2,Delta, dots,sigma_n $其中$Delta sigma_i$表示第$i$个小闭区域，也表示它的面积，在每个$Delta sigma_i$上任取一点$(xi_i,eta_i)$,做乘积$f(xi_i,eta_i) Delta sigma_i(i=1,2,dots,n)$,并作和$limits(Sigma)_(i=1)^n f(xi_i,eta_i)Delta sigma_i$,如果当各小闭区域的直径中的最大值$lambda$趋于零时，和的极限总存在，且与小闭区域的分割无关，则称$f(x,y)$在$D$上是可积的，极限值称为$f(x,y)$在$D$上的二重积分，记作$limits(integral.double)_D d(x,y)dif sigma$,即:$ limits(integral.double)_D f(x,y)dif sigma =lim_(lambda arrow 0)limits(Sigma)_(i=1)^n f(xi_i,eta_i)Delta sigma_i $
+设$f(x,y)$是有闭界区域$D$上的有界函数，将整个闭区域$D$任意分成$n$个小闭区域$ Delta sigma_1,Delta sigma_2,Delta, dots,sigma_n $其中$Delta sigma_i$表示第$i$个小闭区域，也表示它的面积，在每个$Delta sigma_i$上任取一点$(xi_i,eta_i)$,做乘积$f(xi_i,eta_i) Delta sigma_i(i=1,2,dots,n)$,并作和$sum_(i=1)^n f(xi_i,eta_i)Delta sigma_i$,如果当各小闭区域的直径中的最大值$lambda$趋于零时，和的极限总存在，且与小闭区域的分割无关，则称$f(x,y)$在$D$上是可积的，极限值称为$f(x,y)$在$D$上的二重积分，记作$limits(integral.double)_D d(x,y)dif sigma$,即:$ limits(integral.double)_D f(x,y)dif sigma =lim_(lambda arrow 0)sum_(i=1)^n f(xi_i,eta_i)Delta sigma_i $
 
 若函数$f$在有界闭区域$D$上连续，则二重积分$limits(integral.double)_D f(x,y) dif sigma$一定存在
 

@@ -48,11 +48,11 @@
   [
     如果随机变量$X$只可能取有限个或可列无限个值$x_1,x_2,dots,$则称$X$为*离散型随机变量*，称$ P{X=x_i}=p_i,i=1,2,dots $为$X$的*分布列、分布律或概率分布*，记为$X tilde p_i$,概率分布常用表格或矩阵形式表示
 
-    数列${p_i}$是离散型随机变量的概率分布的充要条件是：$p_i>=0(i=1,2,dots)$且$limits(Sigma)_(i)p_i=1$
+    数列${p_i}$是离散型随机变量的概率分布的充要条件是：$p_i>=0(i=1,2,dots)$且$sum_(i)p_i=1$
 
-    设离散型随机变量$X$的的概率分布为$P{X=x_i}=p_i$,则$X$的分布函数$ F(x)=P{X<=x}=limits(Sigma)_(x_i<=x)P{X=x_i} $$ P{X=x_i}=P{X<=x_i}-P{X<x_i}=F(x_i)-F(x_i-0) $
+    设离散型随机变量$X$的的概率分布为$P{X=x_i}=p_i$,则$X$的分布函数$ F(x)=P{X<=x}=sum_(x_i<=x)P{X=x_i} $$ P{X=x_i}=P{X<=x_i}-P{X<x_i}=F(x_i)-F(x_i-0) $
 
-    且对实数轴上任一集合$B$,有$ P{x in B}=limits(Sigma)_(x_i in B)p_i $$ P{a<X<=b}=P{X<=b}-P{X<=a}=F(b)-F(a) $
+    且对实数轴上任一集合$B$,有$ P{x in B}=sum_(x_i in B)p_i $$ P{a<X<=b}=P{X<=b}-P{X<=a}=F(b)-F(a) $
   ]
   subsec[连续型随机变量及其概率密度]
   [

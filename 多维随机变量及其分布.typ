@@ -54,9 +54,9 @@
   subsec[二维离散型随机变量得概率分布、边缘分布和条件分布]
   [
     + $p_(i j)=P{X=x_i,Y=y_i},i,j=1,2,dots$
-    + 数列${p_(i j)},i,j=1,2,dots$是某一二维离散型随机变量的概率分布的充要条件是$ p_(i j)>=0,limits(Sigma)_(i=1)^(oo)limits(Sigma)_(j=1)^(oo)p_(i j)=1 $
-    + 联合分布函数$ F(x,y)=P{X<=x,Y<=y}=limits(Sigma)_(x_i<=x)limits(Sigma)_(y_i<=y)p_(i j) $设$G$是平面上的某个区域，则$ P{(X,Y)in G}=limits(Sigma)_((x_i,y_j)in G)p_(i j) $
-    + $X,Y$的边缘分布分别为$ p_(i dot)=P{X=x_i}=limits(Sigma)_(j)^(oo)P{X=x_i,Y=y_j} $和$ p_(dot j)=P{Y=y_j}=limits(Sigma)_(i)^(oo)P{X=x_i,Y=y_j} $
+    + 数列${p_(i j)},i,j=1,2,dots$是某一二维离散型随机变量的概率分布的充要条件是$ p_(i j)>=0,sum_(i=1)^(oo)sum_(j=1)^(oo)p_(i j)=1 $
+    + 联合分布函数$ F(x,y)=P{X<=x,Y<=y}=sum_(x_i<=x)sum_(y_i<=y)p_(i j) $设$G$是平面上的某个区域，则$ P{(X,Y)in G}=sum_((x_i,y_j)in G)p_(i j) $
+    + $X,Y$的边缘分布分别为$ p_(i dot)=P{X=x_i}=sum_(j)^(oo)P{X=x_i,Y=y_j} $和$ p_(dot j)=P{Y=y_j}=sum_(i)^(oo)P{X=x_i,Y=y_j} $
     + 条件分布$ P{X=x_i|Y=y_j}=P{X=x_i,Y=y_j}/P{Y=y_j}=p_(i j)/p_(dot j) $和$ P{Y=y_j|X=x_i}=P{X=x_i,Y=y_j}/P{X=x_i}=p_(i j)/p_(i dot) $
   ]
   subsec[二维连续型随机变量的概率分布、边缘分布和条件分布]

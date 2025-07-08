@@ -24,9 +24,9 @@
   section[一维随机变量的数字特征]
   subsec[随机变量的数学期望]
   [
-    + 若$X$是离散型随机变量，分布列为$p_i=P{X=x_i}(i=1,2,dots)$，若级数$limits(Sigma)_(i=1)^(oo) x_i p_i$绝对收敛，则称随机变量$X$的数学期望存在，并将级数$limits(Sigma)_(i=1)^(oo) x_i p_i$的和称为随机变量$X$的数学期望，记为$E X$,即$ E X=limits(Sigma)_(i=1)^(oo) x_i p_i $
+    + 若$X$是离散型随机变量，分布列为$p_i=P{X=x_i}(i=1,2,dots)$，若级数$sum_(i=1)^(oo) x_i p_i$绝对收敛，则称随机变量$X$的数学期望存在，并将级数$sum_(i=1)^(oo) x_i p_i$的和称为随机变量$X$的数学期望，记为$E X$,即$ E X=sum_(i=1)^(oo) x_i p_i $
 
-      若级数$limits(Sigma)_(i=1)^(oo) g(x_i) p_i$绝对收敛，则称$Y=g(X)$的数学期望$E(g(X))$存在，且$E(g(X))=limits(Sigma)_(i=1)^(oo) g(x_i) p_i$
+      若级数$sum_(i=1)^(oo) g(x_i) p_i$绝对收敛，则称$Y=g(X)$的数学期望$E(g(X))$存在，且$E(g(X))=sum_(i=1)^(oo) g(x_i) p_i$
 
     + 若$X$是连续型随机变量，概率密度为$f(x)$,若积分$integral_(-oo)^(+oo)x f(x)dd(x)$绝对收敛，则称随机变量$X$的数学期望存在，并将积分$integral_(-oo)^(+oo) x f(x) dd(x)$的值称为随机变量$X$的数学期望，记为$E X$.
 
@@ -44,7 +44,7 @@
       - $D X>=0,E(X^2)=D X+(E X)^2>=(E X)^2$
       - $D c=0 arrow.double.l.r X$几乎出处为某个常数$a$,即$P{X=a}=1$
       - $D(a X+b)=a^2 D X$
-      - $D(a X+b Y)=a^2 D X+b^2 D Y+2 a b "Cov"(X,Y),\ D(limits(Sigma)_(i=1)^n a_i X_i)=limits(Sigma)_(i=1)^n a_i^2D X_i+2 limits(Sigma)_(1<=i<j<=n) a_i a_j "Cov"(X_i,X_j)$
+      - $D(a X+b Y)=a^2 D X+b^2 D Y+2 a b "Cov"(X,Y),\ D(sum_(i=1)^n a_i X_i)=sum_(i=1)^n a_i^2D X_i+2 sum_(1<=i<j<=n) a_i a_j "Cov"(X_i,X_j)$
       - 若$X,Y$相互独立，则$ D(a X+b Y)=a^2 D(X)+b^2D(Y), $$ D(X Y)=D X D Y+D X(E X)^2+D Y(E X)^2>=D X D Y $
       - 对任意常数$c$，有$D X=E[(X-E X)^2]<=E[(X-c)^2]$
   ]
@@ -57,10 +57,7 @@
       [分布], [分布列$p_k$或概率密度$f(x)$], [数学期望], [方差],
       [$0-1$分布], [$P{X=k}=p^k (1-p)^(1-k),k=0,1$], [$E X =p$], [$p(1-p)$],
       [几何分布$G(p)$], [$P{X=k}=p(1-p)^(k-1),k=1,2,dots$], [$E X=1/p$], [$D X=(1-p)/p^2$],
-      [二项分布$B(n,p)$],
-      [$P{X=k}=limits(Sigma)_(i=0)^n C_n^i p^i(1-p)^(n-i),k=0,1,dots,n$],
-      [$E X=n p$],
-      [$D X=n p(1-p)$],
+      [二项分布$B(n,p)$], [$P{X=k}=sum_(i=0)^n C_n^i p^i(1-p)^(n-i),k=0,1,dots,n$], [$E X=n p$], [$D X=n p(1-p)$],
 
       [泊松分布$P(lambda)$], [$P{X=k}=lambda^k /k! e^(- lambda),k=0,1,dots$], [$E X=lambda$], [$D X=lambda$],
       [均匀分布$U(a,b)$], [$f(x)=1/(b-a),a<=x<=b$], [$E X=(a+b)/2$], [$D X=(b-a)^2/12$],
@@ -75,7 +72,7 @@
   subsec[二维随机变量函数的数学期望]
   [
     设$X,Y$是随机变量，$g(X,Y)$为$X,Y$的函数
-    + 如果$(X,Y)$为离散型随机变量，其联合分布律为$ p_(i j)=P{X=x_i,Y=y_j}(i,j=1,2,dots) $若级数$limits(Sigma)_(i)limits(Sigma)_j g(x_i,y_j)p_(i j)$绝对收敛，则定义$ E[(g(X,Y))] eq^(Z=g(X,Y))E Z=limits(Sigma)_(i)limits(Sigma)_j g(x_i,y_j)p_(i j) $
+    + 如果$(X,Y)$为离散型随机变量，其联合分布律为$ p_(i j)=P{X=x_i,Y=y_j}(i,j=1,2,dots) $若级数$sum_(i)sum_j g(x_i,y_j)p_(i j)$绝对收敛，则定义$ E[(g(X,Y))] eq^(Z=g(X,Y))E Z=sum_(i)sum_j g(x_i,y_j)p_(i j) $
     + 如果$(X,Y)$为连续型随机变量，其联合概率密度为$f(x,y)$,若积分$integral_(-oo)^(+oo)integral_(-oo)^(+oo)g(x,y)f(x,y)dd(x)dd(y)$绝对收敛，则定义$ E[(g(X,Y))] eq^(Z=g(X,Y))E Z=integral_(-oo)^(+oo)integral_(-oo)^(+oo)g(x,y)f(x,y)dd(x)dd(y) $
 
   ]
@@ -83,7 +80,7 @@
   [
     若随机变量$X,Y$的方差存在且$D X>0,D Y>0,$则称$E[(X-E X)(Y-E Y)]$为随机变量$X$与$Y$的协方差，记为$"Cov"(X,Y)$,即$ "Cov"(X,Y)=E[(X-E X)(Y-E Y)]=E(X Y)-E X dot E Y $
 
-    其中$ E(X Y)=cases(limits(Sigma)_i limits(Sigma)_j x_i y_j P{X=x_i,Y=y_j}, integral_(-oo)^(+oo)integral_(-oo)^(+oo) x y f(x,y)dd(x)dd(y)) $
+    其中$ E(X Y)=cases(sum_i sum_j x_i y_j P{X=x_i,Y=y_j}, integral_(-oo)^(+oo)integral_(-oo)^(+oo) x y f(x,y)dd(x)dd(y)) $
 
     称$rho_(X Y)="Cov"(X,Y)/(sqrt(D X)sqrt(D Y))$为随机变量$X Y$的相关系数，若$rho_(X Y)eq 0$则称$X,Y$不相关
 

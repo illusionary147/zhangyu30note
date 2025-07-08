@@ -1,4 +1,4 @@
-#import "utils.typ": section, subsec, my_init
+#import "utils.typ": my_init, section, subsec
 //#show:my_init()
 #import "@preview/physica:0.9.5": *
 #set text(font: "SimSun")
@@ -44,7 +44,7 @@
   ]
   subsec[行列式按某一行（列）展开的展开公式]
   [
-    行列式等于行列式的某一行（列）元素与其对应的代数余子式的乘积之和，即$ abs(bold(A))=cases(limits(Sigma)_(j=1)^(n)a_(i j)A_(i j)(i=1,2,dots,n), limits(Sigma)_(i=1)^(n)a_(i j)A_(i j)(j=1,2,dots,n)) $
+    行列式等于行列式的某一行（列）元素与其对应的代数余子式的乘积之和，即$ abs(bold(A))=cases(sum_(j=1)^(n)a_(i j)A_(i j)(i=1,2,dots,n), sum_(i=1)^(n)a_(i j)A_(i j)(j=1,2,dots,n)) $
 
     行列式的某一行（列）元素分别乘另一行（列）元素的代数余子式后再求和，结果为零
   ]
